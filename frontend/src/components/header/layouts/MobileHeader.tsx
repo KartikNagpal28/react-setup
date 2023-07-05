@@ -14,8 +14,12 @@ interface MobileHeaderProps {
 export const MobileHeader: React.FC<MobileHeaderProps> = ({ toggleSider, isSiderOpened }) => {
   return (
     <div className="flex justify-between  items-center">
+      {/* Logo for mobile/table size screens */}
       <Link to="/">
-        <img src={tunnelLogo}></img>
+        <span className="font-bold text-3xl flex space-x-1">
+          <p>👩‍🔧</p>
+          <p className="text-white mt-1">Logo</p>
+        </span>
       </Link>
       <Row justify="space-between" align="middle">
         {/* <Col>
