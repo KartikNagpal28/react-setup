@@ -1,0 +1,164 @@
+.container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emailMainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  text-align: center;
+  width: 343px;
+  margin: 48px 16px;
+}
+
+.formContainer {
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.imageContainer {
+  background: #e9fff7;
+  border: 10px solid #e9fff7;
+  border-radius: 28px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emailHeadingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emailHeading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #101828;
+}
+
+.emailSubHeading {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #475467;
+}
+
+.buttonContainer {
+  background: #14fda8;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #14fda8;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttonText {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #030303;
+}
+
+.resendHeading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #475467;
+}
+
+.resendHeadingColored {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #14fda8;
+  cursor: pointer;
+}
+
+.backToLoginContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.backToLogin {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #475467;
+}
+
+.codeInputs {
+  display: flex;
+  gap: 8px;
+}
+
+.codeInput {
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border: 2px solid #14fda8;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #14fda8;
+}
+
+@media screen and (min-width: 900px) {
+  .buttonContainer {
+    width: 360px;
+  }
+
+  .emailHeading {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .emailMainContainer {
+    margin: 96px 16px;
+  }
+  .buttonText {
+    color: #030303;
+  }
+  .codeInputs {
+    gap: 12px;
+  }
+  .codeInput {
+    width: 80px;
+    height: 80px;
+    padding: 10px 8px;
+  }
+}

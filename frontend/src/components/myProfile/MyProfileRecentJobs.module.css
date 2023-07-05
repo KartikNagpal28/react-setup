@@ -1,0 +1,9 @@
+.modalHeader {
+  height: 140px;
+}
+
+@media screen and (max-width: 900px) and (min-width: 375px) {
+  .modalHeader {
+    height: 85px;
+  }
+}

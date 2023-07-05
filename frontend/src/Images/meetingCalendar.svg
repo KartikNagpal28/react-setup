@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.2" height="20" viewBox="0 0 18.2 20">
+  <g id="Calendar_star" data-name="Calendar star" transform="translate(-3.4 -2)">
+    <path id="Path_46649" data-name="Path 46649" d="M4.484,9.666H20.526" fill="none" stroke="#9381ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_46650" data-name="Path 46650" d="M16.141,3V5.962" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_46651" data-name="Path 46651" d="M8.868,3V5.962" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_46652" data-name="Path 46652" d="M16.315,4.422H8.694C6.051,4.422,4.4,5.894,4.4,8.6v8.146C4.4,19.494,6.051,21,8.694,21h7.613c2.651,0,4.294-1.48,4.294-4.187V8.6C20.608,5.894,18.966,4.422,16.315,4.422Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+    <path id="Path_46653" data-name="Path 46653" d="M12.877,12.318l.624,1.246a.422.422,0,0,0,.316.227l1.4.2a.413.413,0,0,1,.233.707l-1.009.969a.41.41,0,0,0-.121.367l.238,1.369a.419.419,0,0,1-.61.437L12.7,17.195a.426.426,0,0,0-.391,0l-1.247.647a.419.419,0,0,1-.61-.437l.239-1.369a.412.412,0,0,0-.121-.368L9.557,14.7a.413.413,0,0,1,.232-.707l1.4-.2a.419.419,0,0,0,.316-.227l.625-1.246a.424.424,0,0,1,.57-.181A.417.417,0,0,1,12.877,12.318Z" fill="none" stroke="#9381ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+  </g>
+</svg>

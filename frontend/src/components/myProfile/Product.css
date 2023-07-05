@@ -1,0 +1,24 @@
+.setInputField {
+  display: flex;
+  gap: 10vw;
+}
+
+.setInputField .ant-input-number {
+  width: 10vw;
+}
+
+.setInputField input {
+  width: 10vw;
+}
+
+/* Update the Css of Upload Files */
+.setUploadFields {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #000;
+  border-radius: 12px;
+  opacity: 1;
+  padding: 21px 0;
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+}

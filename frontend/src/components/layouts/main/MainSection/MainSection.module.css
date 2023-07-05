@@ -1,0 +1,46 @@
+.container {
+  margin-top: 240px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+  padding: 25px;
+  flex-direction: row;
+
+  /* Experimental, Deals with the layout shift problem caused by scrollbar width */
+  /* margin-right: 50px; */
+  max-width: calc(100vw - 432px);
+  width: 100%;
+  /* End of experimental */
+
+  background-color: #fcfcfd;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  border-radius: 1rem;
+}
+
+.container > div {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1279px) {
+  .container {
+    /* Experimental, Deals with the layout shift problem caused by scrollbar width */
+    max-width: calc(100vw - 190px);
+  }
+}
+
+@media screen and (max-width: 849px) {
+  .container {
+    margin-top: 0px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: column;
+    gap: 19px !important;
+
+    max-width: unset;
+  }
+}

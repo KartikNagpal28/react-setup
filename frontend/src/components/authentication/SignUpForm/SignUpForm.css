@@ -1,0 +1,166 @@
+.signup-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left-container {
+  background-image: url('../../../assets/images/black-checked-bg.svg');
+  min-width: 49%;
+  height: 100vh;
+  border-radius: 0px 40px 40px 0px;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+}
+
+.signup-form-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 360px;
+  height: 74px;
+}
+
+.signup-welcome-xl {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.signup-welcome-sm {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.left-container-header {
+  height: 96px;
+  padding-left: 1.8rem;
+  padding-top: 1.5rem;
+}
+
+.left-container-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-form {
+  color: #ffffff;
+}
+
+.signup-form {
+  line-height: 1rem;
+}
+
+.signup-form-text > h1 {
+  color: #ffffff;
+}
+
+.signup-text-green-color {
+  color: #04e191;
+}
+
+.text-white-color {
+  color: #ffffff;
+}
+
+.text-opacity {
+  opacity: 0.8;
+}
+
+.ant-form-item-label > label {
+  color: #ffffff;
+}
+
+.signup-form-button {
+  background-color: #04e191;
+  display: block;
+  width: 100%;
+  color: #030303;
+}
+
+.signup-text-center {
+  text-align: center;
+}
+
+.signup-form-button:hover {
+  background-color: #04e191;
+  color: #030303;
+}
+
+@media screen and (max-width: 1280px) {
+  .rigth-container {
+    display: none;
+  }
+
+  .left-container {
+    background-color: #000;
+    width: 100%;
+    border-radius: 0px;
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.ant-form-item-label {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.ant-input::placeholder {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #667085;
+}
+
+/* .ant-input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1b1b;
+  padding: 10px 14px !important;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+} */
+
+.ant-select-selection-item {
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  color: #667085 !important;
+}
+
+.ant-form-item-explain-error {
+  font-size: 12px;
+}
+
+.ant-checkbox + span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 0.8;
+}

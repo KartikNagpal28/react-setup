@@ -1,0 +1,7 @@
+version: 3
+
+tasks:
+  ci-build:
+    desc: Container for CI
+    cmds:
+      - docker build -t tunnel-frontend:ci .

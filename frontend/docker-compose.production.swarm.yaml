@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: ghcr.io/oats-tech/tunnel-trade-frontend:${IMAGE_TAG}
+    networks:
+      - project-overlay
+    deploy:
+      replicas: 1
+
+networks:
+  project-overlay:
+    external: true
+    name: project-overlay

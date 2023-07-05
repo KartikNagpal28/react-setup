@@ -1,0 +1,72 @@
+.header-container {
+  background-image: url('assets/images/black-checked-bg.svg');
+  background-size: cover;
+  background-position: bottom right;
+  max-width: calc(100vw - 372px);
+  width: 100%;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  margin-right: 20px;
+  height: 21rem;
+  padding: 70px;
+  position: fixed;
+
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: repeat(2, max-content);
+  gap: 10px 9px;
+}
+
+.icon {
+  font-size: 52px;
+  line-height: 1;
+  width: 52px;
+  height: 52px;
+}
+
+.heading {
+  font-size: 52px;
+  line-height: 60px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.sub-heading {
+  grid-column: 1/-1;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  align-items: center;
+  color: #fff;
+  opacity: 0.89;
+}
+
+@media screen and (max-width: 1279px) {
+  .header-container {
+    max-width: calc(100vw - 140px);
+  }
+}
+
+@media screen and (max-width: 849px) {
+  .header-container {
+    position: static;
+    max-width: unset;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-right: 0px;
+    height: fit-content;
+    padding: 16px;
+  }
+
+  .icon {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
