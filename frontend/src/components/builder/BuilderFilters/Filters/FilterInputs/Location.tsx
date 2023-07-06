@@ -34,7 +34,7 @@ export const Location = () => {
     <Select
       mode="multiple"
       allowClear
-      placeHolder={{ Icon: LocationIcon, title: 'Location', showChevron: false }}
+      placeHolder={{ Icon: LocationIcon, title: 'Filter 3', showChevron: false }}
       options={availableLocations.map((location) => ({
         label: `${location.city}`,
         value: location.city,

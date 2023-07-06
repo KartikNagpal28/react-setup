@@ -23,7 +23,7 @@ export const ExperienceLevel = () => {
     <Select
       mode="multiple"
       allowClear
-      placeHolder={{ Icon: ExpertLevelIcon, title: 'Experience Level' }}
+      placeHolder={{ Icon: ExpertLevelIcon, title: 'Filter 2' }}
       options={selectOptions}
       filterOption={(inputValue, option) => option?.label?.toLowerCase().includes(inputValue.toLowerCase()) ?? false}
       onChange={handleSelectLevels}

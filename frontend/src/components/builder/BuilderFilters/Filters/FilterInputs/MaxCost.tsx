@@ -37,7 +37,7 @@ export const MaxCost = () => {
         min={1}
         max={100}
         className="focus:outline-0 border-0 text-[14px] text-[#667085] placeholder:text-[#667085] leading-[20px]  w-full"
-        placeholder="Max Cost"
+        placeholder="Filter 5"
       />
     </div>
   );

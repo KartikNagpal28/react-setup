@@ -58,7 +58,7 @@ const FiltersHeader = () => {
 
   return (
     <div className="flex flex-col gap-[13px]">
-      <h1 className={`${classes.heading}`}>Browse Builders</h1>
+      <h1 className={`${classes.heading}`}>Search Here</h1>
       <div className="flex gap-[8px] items-center">
         <div className={classes['search-input']}>
           <SearchFilterIcon />
@@ -67,7 +67,7 @@ const FiltersHeader = () => {
             style={{ fontStyle: 'normal', fontWeight: '400', backgroundColor: 'transparent' }}
             type="text"
             className="focus:outline-0 border-0 text-[14px] text-[#667085] placeholder:text-[#667085] leading-[17px]  w-full"
-            placeholder="Search for a builder..."
+            placeholder="Search here"
             onChange={nameChangeHandler}
           />
         </div>

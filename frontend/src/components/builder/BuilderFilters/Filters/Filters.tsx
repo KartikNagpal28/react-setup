@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
 import BuilderContext from '../../store/builder-context';
-import { FilterExperienceLevel, FilterLocation, FilterMaxCost, FilterMinCost, FilterSkills } from './FilterInputs';
+import { FilterExperienceLevel, FilterLocation, FilterMaxCost, FilterSkills } from './FilterInputs';
 
 import classes from './Filters.module.css';
 
@@ -18,7 +18,6 @@ const Filters = () => {
         <FilterSkills />
         <FilterExperienceLevel />
         <FilterLocation />
-        <FilterMinCost />
         <FilterMaxCost />
       </div>
     </div>

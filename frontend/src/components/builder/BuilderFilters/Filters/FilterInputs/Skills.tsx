@@ -33,7 +33,7 @@ export const Skills = () => {
     <Select
       mode="multiple"
       allowClear
-      placeHolder={{ Icon: SkillIcon, title: 'Skill' }}
+      placeHolder={{ Icon: SkillIcon, title: 'Filter 1' }}
       options={skillOptions}
       filterOption={(inputValue, option) => option?.label.toLowerCase().includes(inputValue.toLowerCase()) ?? false}
       onChange={handleSelectSkills}
