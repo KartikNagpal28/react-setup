@@ -41,7 +41,11 @@ const SignUpForm: React.FC = () => {
       <div className="signup-container">
         <div className="left-container">
           <div className="left-container-header">
-            <img src={tunnelLogo} alt="" />
+            {/* Logo for large screen */}
+            <span className="font-bold text-3xl flex space-x-1">
+              <p>👩‍🔧</p>
+              <p className="text-white mt-1">Logo</p>
+            </span>
           </div>
           <div className="flex items-center h-screen">
             <div className="left-container-form">

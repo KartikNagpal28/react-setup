@@ -47,7 +47,11 @@ const Login: React.FC = () => {
       <div className="login-container">
         <div className="login-left-container">
           <div className="login-header-navigation">
-            <img src={tunnelLogo} alt="" />
+            {/* Logo for large screen */}
+            <span className="font-bold text-3xl flex space-x-1">
+              <p>👩‍🔧</p>
+              <p className="text-white mt-1">Logo</p>
+            </span>
           </div>
           <div className="flex items-center h-screen">
             <div className="login-container-form">
