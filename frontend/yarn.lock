@@ -12849,7 +12849,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.1":
+"prettier@npm:^2.8.8":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
@@ -16354,7 +16354,7 @@ __metadata:
     patch-package: ^6.4.7
     postcss: ^8.4.5
     postinstall-postinstall: ^2.1.0
-    prettier: ^2.3.1
+    prettier: ^2.8.8
     query-string: ^8.1.0
     react: ^17.0.2
     react-country-flag: ^3.0.2

@@ -14,7 +14,7 @@ const BuilderDetails: React.FC = () => {
   const ctx = useContext(BuilderContext);
 
   return (
-    <MainSection icon={EmojiBuilder} title="All Builders" subtitle="Browse all builders on Tunnel">
+    <MainSection icon={EmojiBuilder} title="All Users" subtitle="Browse all users on App">
       <BuilderFilters />
 
       <div className={`${builderDetailModule.rightMainSection}`}>
@@ -26,7 +26,7 @@ const BuilderDetails: React.FC = () => {
           <span style={{ fontStyle: 'normal', fontWeight: '700', lineHeight: '21px', color: '#170F1D' }}>
             {ctx.builders.length}
           </span>{' '}
-          builders
+          Registered users
         </p>
         {ctx.builders.map((builder: BuilderDetail) => (
           <BuilderCard key={builder.id} builderDetail={builder} />
