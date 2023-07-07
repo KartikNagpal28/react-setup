@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import './LoginStyle.css';
 import { Button, Checkbox, Form, Input } from 'antd';
-import tunnelLogo from '@app/assets/logo-light.svg';
-import Testimonial from './Testimonial';
 import { useNavigate } from 'react-router-dom';
-import { doLogin } from '@app/store/slices/authSlice';
-import { useAppDispatch } from '@app/hooks/reduxHooks';
-import { notificationController } from '@app/controllers/notificationController';
-import SignUpTestimonial from '../SignUpForm/SignUpTestimonial';
+import SignUpTestimonial from '../SignUp-Form/SignUpTestimonial';
 import { Link } from 'react-router-dom';
-import { LoginErrors } from '@app/constants/enums/login-errors.enum';
 
 interface LoginFormData {
   email: string;
@@ -24,22 +18,9 @@ const initValues = {
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const dispatch = useAppDispatch();
-  const [isLoading, setLoading] = useState(false);
 
   const handleSubmit = async (values: LoginFormData) => {
-    setLoading(true);
-    const formData = values;
-    delete formData.remember;
-    dispatch(doLogin(values))
-      .unwrap()
-      .then(() => navigate('/'))
-      .catch((err) => {
-        if (err === LoginErrors.UNVERIFIED) {
-          navigate('/emailverification', { state: { email: values.email } });
-        }
-        setLoading(false);
-      });
+    navigate('/');
   };
 
   return (

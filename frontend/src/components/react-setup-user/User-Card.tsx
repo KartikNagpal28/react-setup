@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import UserProfile from './UserProfile';
+import UserProfile from './User-Profile';
 import { CardHeaderProps } from '@app/interfaces/User';
 import levelIcon from '@app/TunnelImages/levelIcon.svg';
 import defaultImg from '@app/assets/images/dummy-profile-pic.jpg';
 import dollarIcon from '@app/assets/icons/dollarIcon.svg';
-import userCardModule from './UserCard.module.css';
+import userCardModule from './User-Card.module.css';
 const defaultImageUrl = defaultImg;
 
 const styles = {

@@ -88,19 +88,25 @@ const SiderMenu: React.FC<SiderContentProps> = ({ setCollapsed, isCollapsed }) =
                     isCollapsed && window.innerWidth < 1280 ? 'invisible' : 'visible'
                   }`}
                 >
-                  Settings
+                  Profile
                 </p>
               </div>
             </Link>
 
-            {!user && (
+            {/* {!user && (
               <div className="flex gap-[14px] cursor-pointer">
                 <img src={builderIcon} />
                 <Link to="login" className="hover:text-[#F2F4F7] text-[16px] leading-6 font-semibold text-[#F2F4F7]">
                   Sign In
                 </Link>
               </div>
-            )}
+            )} */}
+            <div className="flex gap-[14px] cursor-pointer">
+              <img src={builderIcon} />
+              <Link to="login" className="hover:text-[#F2F4F7] text-[16px] leading-6 font-semibold text-[#F2F4F7]">
+                Sign In
+              </Link>
+            </div>
           </div>
           <ProfileDropdown />
         </div>

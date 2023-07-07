@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
-import tunnelLogo from '../../../TunnelImages/tunnelLogo.svg';
 import SignUpTestimonial from './SignUpTestimonial';
 import './SignUpForm.css';
 import { Select, Option } from '@app/components/common/selects/Select/Select';
 import { AuthSelect } from '@app/components/common/selects/AuthSelect/AuthSelect';
-import { registerUser } from '@app/services/registerUser';
-import { notificationController } from '@app/controllers/notificationController';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
@@ -20,20 +17,7 @@ const SignUpForm: React.FC = () => {
   const navigate = useNavigate();
   const [isLoading, setLoading] = useState(false);
   const handleSubmit = (formData: SignUpFormData) => {
-    setLoading(true);
-    setLoading(true);
-    registerUser(formData)
-      .then(() => {
-        notificationController.success({
-          message: 'New user was created',
-          description: 'Please use your new credentials to log in',
-        });
-        navigate('/emailverification', { state: { email: formData.email, password: formData.password } });
-      })
-      .catch((err) => {
-        notificationController.error({ message: err?.data?.message });
-        setLoading(false);
-      });
+    navigate('/');
   };
 
   return (
@@ -69,8 +53,8 @@ const SignUpForm: React.FC = () => {
                     rules={[{ required: true, message: 'Please select user type!' }]}
                   >
                     <AuthSelect placeholder="Select user type">
-                      <Option value="builder">Builder</Option>
-                      <Option value="business">Business</Option>
+                      <Option value="type1">User type 1</Option>
+                      <Option value="type2">User type 2</Option>
                     </AuthSelect>
                   </Form.Item>
                   <Form.Item

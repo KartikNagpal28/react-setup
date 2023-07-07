@@ -2,7 +2,7 @@ import { BuilderProfileProps, RecentJobs } from '@app/interfaces/Builder';
 import { UserProfileProps } from '@app/interfaces/User';
 import { Modal } from 'antd';
 import React, { useEffect, useState } from 'react';
-import './UserProfile.module.css';
+import './User-Profile.module.css';
 import tunnelStatsHands from '@app/TunnelImages/tunnelStatsHands.svg';
 import tunnelStatsPop from '@app/TunnelImages/tunnelStatsPop.svg';
 import { getRecentJobs } from '@app/api/myprofile.api';
@@ -80,7 +80,7 @@ const BuilderProfile: React.FC<UserProfileProps> = ({ isProfileClicked, setProfi
                 style={{ fontStyle: 'normal', fontWeight: '700' }}
                 className="text-[12px] leading-[12px] tracking-[2px]"
               >
-                TUNNEL STATS
+                USER STATS
               </p>
               <div className="w-full sm:w-[300px] bg-[#FFF] border border-[#E2E2DB] rounded-[8px] pl-[13px] pr-[73px] py-3">
                 <div className="flex gap-[15.5px] items-center mb-[11px]">
@@ -126,7 +126,7 @@ const BuilderProfile: React.FC<UserProfileProps> = ({ isProfileClicked, setProfi
                       style={{ fontWeight: '400', fontStyle: 'normal' }}
                       className="text-[#170F1D] text-[12px] leading-[17px] font-normal"
                     >
-                      Builder Rating
+                      User Rating
                     </p>
                   </div>
                 </div>

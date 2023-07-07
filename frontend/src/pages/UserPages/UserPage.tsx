@@ -1,8 +1,8 @@
-import UserDetails from '@app/components/react-setup-user/UserDetail';
+import UserDetails from '@app/components/react-setup-user/User-Detail';
 import { PageTitle } from '@app/components/common/PageTitle/PageTitle';
 import React from 'react';
 
-const BuilderPage: React.FC = () => {
+const UserPage: React.FC = () => {
   return (
     <div className="bg-[#FFF]">
       <PageTitle>Users</PageTitle>
@@ -11,4 +11,4 @@ const BuilderPage: React.FC = () => {
   );
 };
 
-export default BuilderPage;
+export default UserPage;

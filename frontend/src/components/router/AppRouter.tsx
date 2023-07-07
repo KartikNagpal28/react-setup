@@ -14,7 +14,7 @@ import { withLoading } from '@app/hocs/withLoading.hoc';
 
 import ProfilePage from '@app/pages/ProfilePages/Profile';
 import Home from '@app/pages/Home/Home';
-import BuilderPage from '@app/pages/BuilderPages/BuilderPage';
+import UserPage from '@app/pages/UserPages/UserPage';
 import MyProfilePage from '@app/pages/MyProfilePages/MyProfilePage';
 import EmailVerification from '../authentication/EmailVerification/EmailVerification';
 import EmailVerifiedConfirm from '../authentication/EmailVerification/EmailVerifiedConfirm';
@@ -53,7 +53,7 @@ export const AppRouter: React.FC = () => {
       <Routes>
         <Route path="/" element={protectedLayout}>
           {/* <Route index element={<MyProfilePage />} /> */}
-          <Route index element={<BuilderPage />} />
+          <Route index element={<UserPage />} />
           {user && user.builderId ? (
             <Route path="profile" element={<MyProfilePage />} />
           ) : (
@@ -63,7 +63,7 @@ export const AppRouter: React.FC = () => {
           <Route path="server-error" element={<ServerError />} />
           <Route path="404" element={<Error404 />} />
           <Route path="profile" element={<ProfilePage />} />
-          <Route path="builder" element={<BuilderPage />} />
+          <Route path="builder" element={<UserPage />} />
           <Route path="myprofile" element={<MyProfilePage />} />
         </Route>
 

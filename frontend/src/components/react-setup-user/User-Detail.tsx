@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import UserCard from './UserCard';
+import UserCard from './User-Card';
 import UserFilters from './UserFilter/UserFilters';
 import EmojiBuilder from '@app/assets/icons/emoji-builder.svg';
 import MainSection from '@app/components/layouts/main/MainSection/MainSection';
 
-import userDetailModule from './UserDetail.module.css';
+import userDetailModule from './User-Detail.module.css';
 
 const UserDetails: React.FC = () => {
   return (
