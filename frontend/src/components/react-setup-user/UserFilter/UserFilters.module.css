@@ -1,0 +1,15 @@
+.filters {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 28px 15px;
+  width: 240px;
+}
+
+@media screen and (max-width: 849px) {
+  .filters {
+    background: #fff;
+    border-radius: 0;
+    padding: 15px 15px 0 16px;
+    width: 100%;
+  }
+}

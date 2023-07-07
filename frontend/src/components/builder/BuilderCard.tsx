@@ -61,7 +61,7 @@ const BuilderCard: React.FC<CardHeaderProps> = ({ builderDetail }) => {
                 <div className="flex gap-[6px]">
                   <img src={levelIcon} alt="" />
                   <span className="text-[14px] text-[#1B1B1B] leading-[20px] font-normal">
-                    Level {builderDetail.experienceLevel} builder
+                    Level {builderDetail.experienceLevel} User
                   </span>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const BuilderCard: React.FC<CardHeaderProps> = ({ builderDetail }) => {
                   style={{ fontWeight: '500', fontStyle: 'normal' }}
                   className="text-[#475467] text-[12px] leading-[18px]"
                 >
-                  Builder Rating
+                  User Rating
                 </p>
               </div>
             )}

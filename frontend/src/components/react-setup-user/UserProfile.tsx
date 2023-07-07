@@ -1,16 +1,15 @@
 import { BuilderProfileProps, RecentJobs } from '@app/interfaces/Builder';
+import { UserProfileProps } from '@app/interfaces/User';
 import { Modal } from 'antd';
 import React, { useEffect, useState } from 'react';
-import './BuilderProfile.module.css';
+import './UserProfile.module.css';
 import tunnelStatsHands from '@app/TunnelImages/tunnelStatsHands.svg';
 import tunnelStatsPop from '@app/TunnelImages/tunnelStatsPop.svg';
 import { getRecentJobs } from '@app/api/myprofile.api';
-import BuilderCarousel from './BuilderCarousel';
 import { Rate } from 'antd';
 import defaultImg from '@app/assets/images/dummy-profile-pic.jpg';
 import { ReactComponent as CloseModal } from '@app/assets/icons/closeModalIcon.svg';
 import { Button } from '../common/buttons/Button/Button.styles';
-import BuilderBooking from './BuilderBooking/BuilderBooking';
 import { useAppSelector } from '@app/hooks/reduxHooks';
 
 const defaultImageUrl = defaultImg;
@@ -27,7 +26,7 @@ const styles = {
     color: '#344054',
   },
 };
-const BuilderProfile: React.FC<BuilderProfileProps> = ({ isProfileClicked, setProfileClicked, builderDetail }) => {
+const BuilderProfile: React.FC<UserProfileProps> = ({ isProfileClicked, setProfileClicked }) => {
   const arr = Array(10).fill({});
   const images = Array(6).fill({});
 
@@ -36,20 +35,8 @@ const BuilderProfile: React.FC<BuilderProfileProps> = ({ isProfileClicked, setPr
   const [selectedJob, setSelectedJob] = useState<RecentJobs | null>(null);
   const [recentJobs, setRecentJobs] = useState<RecentJobs[]>([]);
   const [isCarouselOpen, setIsCaraouselOpen] = useState<boolean>(false);
-  const firstName = builderDetail.user?.firstName || '';
-  const lastName = builderDetail.user?.lastName || '';
-
-  const [isBookingInitiated, setBookingInitiated] = useState(false);
-
-  useEffect(() => {
-    if (isProfileClicked && builderDetail.id) {
-      getRecentJobs(builderDetail.id).then((res: any) => {
-        if (res.data) {
-          setRecentJobs(res.data.recentJobs);
-        }
-      });
-    }
-  }, [isProfileClicked, builderDetail.id]);
+  const firstName = 'Lorem';
+  const lastName = 'Ipsum';
 
   return (
     <div className="modal-builder">
@@ -63,13 +50,13 @@ const BuilderProfile: React.FC<BuilderProfileProps> = ({ isProfileClicked, setPr
         <div className="h-[140px] bg-[url('assets/images/black-checked-bg.svg')] relative z-10 mt-20">
           <img
             className="absolute top-[50px] left-[33px] w-[120px] h-[120px] rounded-[10px]"
-            src={builderDetail.user?.photoUrl || defaultImageUrl}
+            src={defaultImageUrl}
             alt=""
           />
         </div>
         <div className="px-[33px] flex flex-col pb-[76px] mt-[17px] h-[28.125rem] overflow-auto">
           <Button
-            className={`w-fit ml-auto mr-[5px] ${user?.businessId ? 'visible' : 'invisible'}`}
+            className={`w-fit ml-auto mr-[5px] visible`}
             type="primary"
             // onClick={() => setBookingInitiated(true)}
           >
@@ -81,9 +68,9 @@ const BuilderProfile: React.FC<BuilderProfileProps> = ({ isProfileClicked, setPr
           <div className="builder-description lg:flex justify-between">
             <div>
               <div className="w-full lg:w-[550px] flex flex-col gap-[20px]">
-                <span className="font-normal">Level {builderDetail.experienceLevel} Builder</span>
+                <span className="font-normal">Level 2 Builder</span>
                 <div className="bg-[#F4F5F7] w-full lg:w-[552px] min-h-[126px] rounded-[5px] p-[15px] lg:p-[15px 24.5656px 15px 18px]">
-                  <span className="text-[#000] text-[14px] leading-6 font-normal">{builderDetail.bio}</span>
+                  <span className="text-[#000] text-[14px] leading-6 font-normal">Hello world</span>
                 </div>
               </div>
             </div>
@@ -133,7 +120,7 @@ const BuilderProfile: React.FC<BuilderProfileProps> = ({ isProfileClicked, setPr
                       style={{ fontWeight: '600', fontStyle: 'normal' }}
                       className="text-[#04C982] text-[14px] leading-[19px] font-semibold"
                     >
-                      {builderDetail.rating || '0'}
+                      {'5'}
                     </p>
                     <p
                       style={{ fontWeight: '400', fontStyle: 'normal' }}
@@ -155,11 +142,9 @@ const BuilderProfile: React.FC<BuilderProfileProps> = ({ isProfileClicked, setPr
               Skills
             </p>
             <div className="flex flex-wrap gap-2">
-              {builderDetail.skills?.map((skill, index) => (
-                <span style={styles.skillContainer} key={index}>
-                  {skill.skillName}
-                </span>
-              ))}
+              <span>Electrical</span>
+              <span>Masonry</span>
+              <span>Havc</span>
             </div>
           </div>
 
@@ -207,24 +192,6 @@ const BuilderProfile: React.FC<BuilderProfileProps> = ({ isProfileClicked, setPr
           </div>
         </div>
       </Modal>
-
-      <div>
-        {isCarouselOpen && (
-          <BuilderCarousel
-            isProfileClicked={isProfileClicked}
-            setProfileClicked={setProfileClicked}
-            isCarouselOpen={isCarouselOpen}
-            setIsCaraouselOpen={setIsCaraouselOpen}
-            job={selectedJob}
-          />
-        )}
-      </div>
-
-      <BuilderBooking
-        isBookingInitiated={isBookingInitiated}
-        setBookingInitiated={setBookingInitiated}
-        builderDetail={builderDetail}
-      />
     </div>
   );
 };
