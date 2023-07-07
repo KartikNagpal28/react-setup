@@ -5,6 +5,7 @@ import React from 'react';
 const MyProfilePage: React.FC = () => {
   return (
     <>
+      {/* this my profile form is for builders */}
       <PageTitle>My Profile</PageTitle>
       <MyProfileForm />
     </>

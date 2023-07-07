@@ -16,7 +16,6 @@ import ProfilePage from '@app/pages/ProfilePages/Profile';
 import Home from '@app/pages/Home/Home';
 import BuilderPage from '@app/pages/BuilderPages/BuilderPage';
 import MyProfilePage from '@app/pages/MyProfilePages/MyProfilePage';
-import BusinessPage from '@app/pages/BusinessPages/BusinessPage';
 import EmailVerification from '../authentication/EmailVerification/EmailVerification';
 import EmailVerifiedConfirm from '../authentication/EmailVerification/EmailVerifiedConfirm';
 import EmailVerificationPage from '@app/pages/EmailVerificationPage/EmailVerificationPage';
@@ -58,7 +57,7 @@ export const AppRouter: React.FC = () => {
           {user && user.builderId ? (
             <Route path="profile" element={<MyProfilePage />} />
           ) : (
-            <Route path="profile" element={<BusinessPage />} />
+            <Route path="profile" element={<MyProfilePage />} />
           )}
 
           <Route path="server-error" element={<ServerError />} />
