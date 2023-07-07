@@ -1,6 +1,4 @@
 import { useContext, useEffect, useState } from 'react';
-
-import { BuilderApi } from '@app/api/';
 import { AvailableLocations } from '@app/interfaces';
 import { Select } from '@common-components/selects/Select/Select';
 // import BuilderContext from '@app/components/builder/store/builder-context';
@@ -10,11 +8,7 @@ export const Location = () => {
   const [availableLocations, setAvailableLocations] = useState<AvailableLocations[]>([]);
 
   useEffect(() => {
-    BuilderApi.getAllCities().then((res) => {
-      if (res.data) {
-        setAvailableLocations(res.data.cities);
-      }
-    });
+    // For setting the cities data
   }, []);
 
   // const filterCtx = useContext(BuilderContext);
