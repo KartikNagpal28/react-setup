@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import './User-Profile.module.css';
 import tunnelStatsHands from '@app/TunnelImages/tunnelStatsHands.svg';
 import tunnelStatsPop from '@app/TunnelImages/tunnelStatsPop.svg';
-import { getRecentJobs } from '@app/api/myprofile.api';
+// import { getRecentJobs } from '@app/api/myprofile.api';
 import { Rate } from 'antd';
 import defaultImg from '@app/assets/images/dummy-profile-pic.jpg';
 import { ReactComponent as CloseModal } from '@app/assets/icons/closeModalIcon.svg';

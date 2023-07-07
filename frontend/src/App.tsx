@@ -10,7 +10,7 @@ import { themeObject } from './styles/themes/themeVariables';
 import MainState from './context/mainState';
 import { useAppDispatch } from './hooks/reduxHooks';
 import { setTheme } from './store/slices/themeSlice';
-import MapContainer from './components/myProfile/MapContainer';
+import MapContainer from './components/my-Profile/MapContainer';
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();

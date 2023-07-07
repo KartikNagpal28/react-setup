@@ -4,11 +4,11 @@ import { Navigate } from 'react-router-dom';
 import { doLogout } from '@app/store/slices/authSlice';
 
 const Logout: React.FC = () => {
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    dispatch(doLogout());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(doLogout());
+  // }, [dispatch]);
 
   return <Navigate to="/login" replace />;
 };

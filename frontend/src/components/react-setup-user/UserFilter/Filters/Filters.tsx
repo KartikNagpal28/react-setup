@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { FilterExperienceLevel, FilterLocation, FilterMaxCost, FilterSkills } from './FilterInputs';
+import { FilterExperienceLevel, FilterLocation, FilterMaxCost } from './FilterInputs';
 
 import classes from './Filters.module.css';
 
@@ -12,7 +12,6 @@ const Filters = () => {
       </p>
 
       <div className="flex flex-col gap-[5px]">
-        <FilterSkills />
         <FilterExperienceLevel />
         <FilterLocation />
         <FilterMaxCost />

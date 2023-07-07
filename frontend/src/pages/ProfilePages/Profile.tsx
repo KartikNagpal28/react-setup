@@ -1,4 +1,4 @@
-import { UserProfile } from '@app/components/User/UserProfile';
+import { UserProfile } from '@app/components/User/User-Profile';
 
 const ProfilePage: React.FC = () => {
   return (

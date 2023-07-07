@@ -2,7 +2,7 @@ import { EditJobProps, MyProfileRecentJobsData } from '@app/interfaces/MyProfile
 import React, { useEffect, useState, useRef } from 'react';
 import { Form, Input, InputNumber, Modal, Upload } from 'antd';
 import { BaseButtonsForm } from '../common/forms/BaseButtonsForm/BaseButtonsForm';
-import { getJobByJobId, updateBuilderProfile, updateJob } from '@app/api/myprofile.api';
+// import { getJobByJobId, updateBuilderProfile, updateJob } from '@app/api/myprofile.api';
 import productmodule from './Image.module.css';
 import './Product.css';
 import Download from '@app/Images/download.svg';
@@ -46,11 +46,11 @@ const MyProfileEditRecentJob: React.FC<EditJobProps> = ({
   const [fullAddress, setFullAddress] = useState<any>([]);
 
   useEffect(() => {
-    getJobByJobId(builderId, editJobId).then((res: any) => {
-      if (res.data) {
-        setJobDetails(res.data.recentJob);
-      }
-    });
+    // getJobByJobId(builderId, editJobId).then((res: any) => {
+    //   if (res.data) {
+    //     setJobDetails(res.data.recentJob);
+    //   }
+    // });
   }, []);
 
   useEffect(() => {
@@ -98,7 +98,7 @@ const MyProfileEditRecentJob: React.FC<EditJobProps> = ({
       };
 
       try {
-        await updateJob(builderId, editJobId, updatedJobDetails);
+        // await updateJob(builderId, editJobId, updatedJobDetails);
         setJobDetails(updatedJobDetails);
       } catch (error) {
         console.error('Error updating job:', error);
@@ -157,18 +157,17 @@ const MyProfileEditRecentJob: React.FC<EditJobProps> = ({
       recentJobMediaItems: [...updatedJobDetails.recentJobMediaItems, ...updatedValues.recentJobMediaItems],
     };
 
-    updateJob(builderId, editJobId, mergedJobDetails)
-      .then(() => {
-        setEditJobClicked(!isEditJobClicked);
-        // setJobDetails(mergedJobDetails);
-        setEditJobClicked(!isEditJobClicked);
-        notificationController.success({
-          message: 'Jobs updated successfully.',
-        });
-      })
-      .catch((err) => {
-        notificationController.error({ message: err.message });
-      });
+    // updateJob(builderId, editJobId, mergedJobDetails)
+    //   .then(() => {
+    //     setEditJobClicked(!isEditJobClicked);
+    //     setEditJobClicked(!isEditJobClicked);
+    //     notificationController.success({
+    //       message: 'Jobs updated successfully.',
+    //     });
+    //   })
+    //   .catch((err: any) => {
+    //     notificationController.error({ message: err.message });
+    //   });
   };
 
   const inputRef = useRef<any>(null);

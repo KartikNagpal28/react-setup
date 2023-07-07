@@ -54,7 +54,7 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
   {
     title: 'Users',
     key: 'users',
-    url: '/builder',
+    url: '/user',
     icon: <img src={builderIcon} alt="" style={imgStyle.img1} />,
   },
 ];

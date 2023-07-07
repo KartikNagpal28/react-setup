@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { LoginUserDetail } from '@app/api/auth.api';
+// import { LoginUserDetail } from '@app/api/auth.api';
 import * as S from './UserProfile.styles';
 import { BaseButtonsForm } from '../common/forms/BaseButtonsForm/BaseButtonsForm';
 import { Input } from '../common/inputs/Input/Input';
@@ -20,13 +20,7 @@ export const UserProfile: React.FC = () => {
   const [isLoading, setLoading] = useState(false);
   const [userData, setUserData] = useState<UserData>(initValues);
 
-  useEffect(() => {
-    LoginUserDetail().then((res: any) => {
-      if (res.data) {
-        setUserData(res.data.user);
-      }
-    });
-  }, []);
+  useEffect(() => {}, []);
   return (
     <>
       <S.WrapperRow justify="space-between" style={{ overflow: 'hidden' }}>
@@ -37,10 +31,7 @@ export const UserProfile: React.FC = () => {
               label="First Name"
               rules={[{ required: true, message: 'First Name required' }]}
             >
-              <Input
-                value={userData.firstName}
-                onChange={(e) => setUserData({ ...userData, firstName: e.target.value })}
-              />
+              <Input value="Lorem" onChange={(e) => setUserData({ ...userData, firstName: e.target.value })} />
             </BaseButtonsForm.Item>
 
             <BaseButtonsForm.Item
@@ -48,7 +39,7 @@ export const UserProfile: React.FC = () => {
               label="Last Name"
               rules={[{ required: true, message: 'Last Name required' }]}
             >
-              <Input defaultValue={userData.lastName} />
+              <Input defaultValue="Ipsum" />
             </BaseButtonsForm.Item>
 
             <BaseButtonsForm.Item
@@ -56,7 +47,7 @@ export const UserProfile: React.FC = () => {
               label="Email"
               rules={[{ required: true, message: 'Email required', type: 'email' }]}
             >
-              <Input defaultValue={userData.email} />
+              <Input defaultValue="test@gmail.com" />
             </BaseButtonsForm.Item>
           </BaseButtonsForm>
         </S.FormWrapper>
