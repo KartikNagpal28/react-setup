@@ -2,13 +2,11 @@ import { EditJobProps, MyProfileRecentJobsData } from '@app/interfaces/MyProfile
 import React, { useEffect, useState, useRef } from 'react';
 import { Form, Input, InputNumber, Modal, Upload } from 'antd';
 import { BaseButtonsForm } from '../common/forms/BaseButtonsForm/BaseButtonsForm';
-// import { getJobByJobId, updateBuilderProfile, updateJob } from '@app/api/myprofile.api';
 import productmodule from './Image.module.css';
 import './Product.css';
 import Download from '@app/Images/download.svg';
 import uploadIcon from '@app/TunnelImages/uploadIcon.svg';
 import DeleteImage from '@app/Images/delete.svg';
-import { uploadPhoto } from '@app/api/common.api';
 import { notificationController } from '@app/controllers/notificationController';
 import { Button } from '../common/buttons/Button/Button';
 import { ReactComponent as CloseModal } from '@app/assets/icons/closeModalIcon.svg';
@@ -45,13 +43,7 @@ const MyProfileEditRecentJob: React.FC<EditJobProps> = ({
   const [fileUrl, setFileUrl] = useState<Array<string>>([]);
   const [fullAddress, setFullAddress] = useState<any>([]);
 
-  useEffect(() => {
-    // getJobByJobId(builderId, editJobId).then((res: any) => {
-    //   if (res.data) {
-    //     setJobDetails(res.data.recentJob);
-    //   }
-    // });
-  }, []);
+  useEffect(() => {}, []);
 
   useEffect(() => {
     if (jobDetails) {
@@ -72,10 +64,7 @@ const MyProfileEditRecentJob: React.FC<EditJobProps> = ({
   const handleChange2 = async (e: any) => {
     try {
       const filePath = [...fileUrl];
-      for (let i = 0; i < e.target.files.length; i++) {
-        const res = await uploadPhoto(e.target.files[i]);
-        filePath.push(res.data.url);
-      }
+      for (let i = 0; i < e.target.files.length; i++) {}
       setFileUrl(filePath);
     } catch (err) {
       console.error(err);
@@ -98,7 +87,6 @@ const MyProfileEditRecentJob: React.FC<EditJobProps> = ({
       };
 
       try {
-        // await updateJob(builderId, editJobId, updatedJobDetails);
         setJobDetails(updatedJobDetails);
       } catch (error) {
         console.error('Error updating job:', error);
@@ -156,18 +144,6 @@ const MyProfileEditRecentJob: React.FC<EditJobProps> = ({
       ...updatedValues,
       recentJobMediaItems: [...updatedJobDetails.recentJobMediaItems, ...updatedValues.recentJobMediaItems],
     };
-
-    // updateJob(builderId, editJobId, mergedJobDetails)
-    //   .then(() => {
-    //     setEditJobClicked(!isEditJobClicked);
-    //     setEditJobClicked(!isEditJobClicked);
-    //     notificationController.success({
-    //       message: 'Jobs updated successfully.',
-    //     });
-    //   })
-    //   .catch((err: any) => {
-    //     notificationController.error({ message: err.message });
-    //   });
   };
 
   const inputRef = useRef<any>(null);

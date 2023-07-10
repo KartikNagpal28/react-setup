@@ -1,13 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Input, Modal } from 'antd';
 import { BaseButtonsForm } from '../common/forms/BaseButtonsForm/BaseButtonsForm';
-// import { Address, addRecentJobs, deleteJob, getRecentJobs } from '@app/api/myprofile.api';
 import { BuilderDetail, RecentJobs } from '@app/interfaces/Builder';
 import { MyProfileRecentJobsData, MyProfileRecentJobsProps } from '@app/interfaces/MyProfile';
 import { notificationController } from '@app/controllers/notificationController';
 import { InputNumber } from '../common/inputs/InputNumber/InputNumber';
 import { Button } from '../common/buttons/Button/Button';
-import { uploadPhoto } from '@app/api/common.api';
 import productmodule from './Image.module.css';
 import './Product.css';
 import { ExclamationCircleFilled } from '@ant-design/icons';
@@ -86,13 +84,7 @@ const MyProfileRecentJobs: React.FC<MyProfileRecentJobsProps> = ({ builderId }) 
   const [selectedLocation, setSelectedLocation] = useState<string>('');
   const [newAdd, setNewAdd] = useState<any>({});
   const { confirm } = Modal;
-  function recentUserJob() {
-    // getRecentJobs(builderId).then((res: any) => {
-    //   if (res.data) {
-    //     setRecentJobs(res.data.recentJobs);
-    //   }
-    // });
-  }
+  function recentUserJob() {}
   useEffect(() => {
     recentUserJob();
     if (!isJobClicked) {
@@ -145,26 +137,12 @@ const MyProfileRecentJobs: React.FC<MyProfileRecentJobsProps> = ({ builderId }) 
       rating: null,
       recentJobMediaItems: fileUrl.map((url) => ({ url })),
     };
-    // addRecentJobs(builderId, updatedValues)
-    //   .then(() => {
-    //     setJobClicked(false);
-    //     notificationController.success({
-    //       message: 'Recent Jobs updated successfully.',
-    //     });
-    //     recentUserJob();
-    //   })
-    //   .catch((err) => {
-    //     notificationController.error({ message: err.message });
-    //   });
   };
 
   const handleChange2 = async (e: any) => {
     try {
       const filePath = [...fileUrl];
-      for (let i = 0; i < e.target.files.length; i = i + 1) {
-        const res = await uploadPhoto(e.target.files[i]);
-        filePath.push(res.data.url);
-      }
+      for (let i = 0; i < e.target.files.length; i = i + 1) {}
       setFileUrl(filePath);
     } catch (err) {
       console.error(err);
@@ -187,15 +165,7 @@ const MyProfileRecentJobs: React.FC<MyProfileRecentJobsProps> = ({ builderId }) 
 
   const handleDeleteJob = async (id: number) => {
     try {
-      // await deleteJob(builderId, id);
-      // notificationController.success({
-      //   message: 'Job deleted successfully.',
-      // });
-      // const updatedJobs = recentJobs.filter((item) => item.id !== id);
-      // setRecentJobs(updatedJobs);
-    } catch (err) {
-      // notificationController.error({ message: err.message });
-    }
+    } catch (err) {}
   };
 
   const inputRef = useRef<any>(null);
