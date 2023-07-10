@@ -7,7 +7,6 @@ import { useAutoNightMode } from './hooks/useAutoNightMode';
 import { usePWA } from './hooks/usePWA';
 import { useThemeWatcher } from './hooks/useThemeWatcher';
 import { themeObject } from './styles/themes/themeVariables';
-import MainState from './context/mainState';
 import { useAppDispatch } from './hooks/reduxHooks';
 import { setTheme } from './store/slices/themeSlice';
 import MapContainer from './components/my-Profile/MapContainer';
@@ -31,9 +30,7 @@ const App: React.FC = () => {
         <ConfigProvider>
           <MapContainer>
             {/* This MainSTate handle The Global STate Management */}
-            <MainState>
-              <AppRouter />
-            </MainState>
+            <AppRouter />
           </MapContainer>
         </ConfigProvider>
       </HelmetProvider>

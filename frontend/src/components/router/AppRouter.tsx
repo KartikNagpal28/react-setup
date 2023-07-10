@@ -5,7 +5,6 @@ import { useAppSelector } from '@app/hooks/reduxHooks';
 const AuthLayout = React.lazy(() => import('@app/components/layouts/AuthLayout/AuthLayout'));
 import LoginPage from '@app/pages/LoginPage';
 
-//tunnel
 import RegisterPage from '@app/pages/RegisterPage';
 
 import MainLayout from '@app/components/layouts/main/MainLayout/MainLayout';

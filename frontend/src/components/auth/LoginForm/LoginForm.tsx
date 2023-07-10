@@ -5,7 +5,6 @@ import { useAppDispatch } from '@app/hooks/reduxHooks';
 import { notificationController } from '@app/controllers/notificationController';
 import * as S from './LoginForm.styles';
 import * as Auth from '@app/components/layouts/AuthLayout/AuthLayout.styles';
-import { doLogin } from '@app/store/slices/authSlice';
 import { maxInputLength } from '@app/config/configVariable';
 
 interface LoginFormData {
@@ -26,13 +25,6 @@ export const LoginForm: React.FC = () => {
 
   const handleSubmit = async (values: LoginFormData) => {
     setLoading(true);
-    dispatch(doLogin(values))
-      .unwrap()
-      .then(() => navigate('/'))
-      .catch((err) => {
-        notificationController.error({ message: err.message });
-        setLoading(false);
-      });
   };
 
   return (

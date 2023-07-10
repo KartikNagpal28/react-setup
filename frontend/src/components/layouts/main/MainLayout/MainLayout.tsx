@@ -3,7 +3,6 @@ import MainSider from '../sider/MainSider/MainSider';
 import MainContent from '../MainContent/MainContent';
 import * as S from './MainLayout.styles';
 import { Outlet } from 'react-router-dom';
-import { LoginUserDetail } from '@app/api/auth.api';
 import { notificationController } from '@app/controllers/notificationController';
 import mainContext from '@app/context/mainContext';
 import { MainHeader } from '../MainHeader/MainHeader';
@@ -13,13 +12,9 @@ const MainLayout: React.FC = () => {
   const [isTwoColumnsLayout, setIsTwoColumnsLayout] = useState(false);
   const [siderCollapsed, setSiderCollapsed] = useState(true);
 
-  const context = useContext(mainContext);
-  const { setLoginUserDetail, setPermissionUserDetail, allFunctions, setAllFunctions } = context;
   const toggleSider = () => setSiderCollapsed(!siderCollapsed);
   async function getLoginUserDetail() {
     try {
-      const res: any = await LoginUserDetail();
-      setLoginUserDetail(res.data.user);
     } catch (err: any) {
       notificationController.error({ message: err?.data?.message });
     }
@@ -27,7 +22,6 @@ const MainLayout: React.FC = () => {
   if (localStorage.getItem('token')) {
     useEffect(() => {
       getLoginUserDetail();
-      setAllFunctions({ ...allFunctions, getLoginUserDetail });
     }, []);
   }
 

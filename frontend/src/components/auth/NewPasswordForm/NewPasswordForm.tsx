@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { BaseForm } from '@app/components/common/forms/BaseForm/BaseForm';
 import { notificationController } from '@app/controllers/notificationController';
 import { useAppDispatch } from '@app/hooks/reduxHooks';
-import { doSetNewPassword } from '@app/store/slices/authSlice';
 import * as S from './NewPasswordForm.styles';
 import * as Auth from '@app/components/layouts/AuthLayout/AuthLayout.styles';
 
@@ -24,19 +23,6 @@ export const NewPasswordForm: React.FC = () => {
 
   const handleSubmit = (values: NewPasswordFormData) => {
     setLoading(true);
-    dispatch(doSetNewPassword({ newPassword: values.password }))
-      .unwrap()
-      .then(() => {
-        navigate('/auth/login');
-        notificationController.success({
-          message: 'New password was set',
-          description: 'Please, use your email with a new password to log in',
-        });
-      })
-      .catch((err) => {
-        notificationController.error({ message: err.message });
-        setLoading(false);
-      });
   };
 
   return (
