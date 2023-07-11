@@ -3,7 +3,6 @@ import EmailIcon from '@app/assets/icons/EmailIcongreen.svg';
 import forgotPwdModule from './ForgotPasswordLink.module.css';
 import { useLocation } from 'react-router-dom';
 import BackToLogin from './BackToLogin';
-import { forgotPassword } from '@app/api/forgotpassword.api';
 import { notificationController } from '@app/controllers/notificationController';
 
 const ForgotPasswordLink: React.FC = () => {
@@ -13,13 +12,6 @@ const ForgotPasswordLink: React.FC = () => {
     if (state.email === null) {
       return;
     }
-    forgotPassword({ email: state.email })
-      .then(() => {
-        notificationController.success({ message: 'New password reset link has been sent' });
-      })
-      .catch((err) => {
-        notificationController.error({ message: err?.data?.message });
-      });
   };
   return (
     <div className={`${forgotPwdModule.container}`}>
