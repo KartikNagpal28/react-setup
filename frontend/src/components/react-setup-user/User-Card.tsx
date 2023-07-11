@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import UserProfile from './User-Profile';
 import { CardHeaderProps } from '@app/interfaces/User';
-import levelIcon from '@app/TunnelImages/levelIcon.svg';
+import levelIcon from '@app/React-Setup-Images/levelIcon.svg';
 import defaultImg from '@app/assets/images/dummy-profile-pic.jpg';
 import dollarIcon from '@app/assets/icons/dollarIcon.svg';
 import userCardModule from './User-Card.module.css';

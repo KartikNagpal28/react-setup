@@ -4,7 +4,6 @@ import { NotificationsDropdown } from '../components/notificationsDropdown/Notif
 import { ProfileDropdown } from '../components/profileDropdown/ProfileDropdown/ProfileDropdown';
 import { SettingsDropdown } from '../components/settingsDropdown/SettingsDropdown';
 import * as S from '../Header.styles';
-import tunnelLogo from '@app/assets/logo-light.svg';
 import { Link } from 'react-router-dom';
 interface MobileHeaderProps {
   toggleSider: () => void;

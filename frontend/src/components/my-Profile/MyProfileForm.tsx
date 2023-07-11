@@ -9,7 +9,7 @@ import MyProfileRecentJobs from './MyProfileRecentJobs';
 import productmodule from './Image.module.css';
 import './Product.css';
 import { RecentJobs } from '@app/interfaces/Builder';
-import uploadIcon from '@app/TunnelImages/uploadIcon.svg';
+import uploadIcon from '@app/React-Setup-Images/uploadIcon.svg';
 import { Button } from '../common/buttons/Button/Button';
 import emailIcon from '@app/assets/icons/emailIcon.svg';
 import profilemodule from './MyProfileForm.module.css';

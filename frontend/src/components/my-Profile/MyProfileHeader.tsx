@@ -1,6 +1,6 @@
 import { MyProfileHeaderProps } from '@app/interfaces/MyProfile';
 import React from 'react';
-import myProfileIcon from '@app/TunnelImages/myProfileIcon.png';
+import myProfileIcon from '@app/React-Setup-Images/myProfileIcon.png';
 import profilemodule from './MyProfileForm.module.css';
 
 const styles: any = {

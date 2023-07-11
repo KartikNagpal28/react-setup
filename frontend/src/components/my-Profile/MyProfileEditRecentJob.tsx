@@ -5,7 +5,7 @@ import { BaseButtonsForm } from '../common/forms/BaseButtonsForm/BaseButtonsForm
 import productmodule from './Image.module.css';
 import './Product.css';
 import Download from '@app/Images/download.svg';
-import uploadIcon from '@app/TunnelImages/uploadIcon.svg';
+import uploadIcon from '@app/React-Setup-Images/uploadIcon.svg';
 import DeleteImage from '@app/Images/delete.svg';
 import { notificationController } from '@app/controllers/notificationController';
 import { Button } from '../common/buttons/Button/Button';

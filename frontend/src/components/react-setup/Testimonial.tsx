@@ -4,7 +4,7 @@ const Testimonial: React.FC = () => {
     <>
       <div className="testimonial-container">
         <div className="message">
-          “We’ve been using Tunnel to find guys to help on our projects. Now I can’t imagine working without it.”
+          “Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dignissimos nisi natus cum ”
         </div>
       </div>
     </>

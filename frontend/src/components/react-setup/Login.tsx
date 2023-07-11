@@ -1,7 +1,6 @@
 import React from 'react';
 import './LoginStyle.css';
 import { Button, Checkbox, Form, Input } from 'antd';
-import tunnelLogo from '@app/TunneImages/tunnelLogo.svg';
 import Testimonial from './Testimonial';
 const Login: React.FC = () => {
   const onFinish = (values: any) => {
@@ -12,9 +11,7 @@ const Login: React.FC = () => {
     <>
       <div className="box">
         <div className="container">
-          <div className="header-navigation">
-            <img className="logo" src={tunnelLogo} alt="" />
-          </div>
+          <div className="header-navigation"></div>
           <div className="form-container">
             <Form
               name="normal_login"

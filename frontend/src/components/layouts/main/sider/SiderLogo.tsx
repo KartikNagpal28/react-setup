@@ -2,9 +2,7 @@ import React from 'react';
 import * as S from './MainSider/MainSider.styles';
 import { RightOutlined } from '@ant-design/icons';
 import { useResponsive } from 'hooks/useResponsive';
-import tunnelLogo from '@app/assets/logo-light.svg';
 import { useAppSelector } from '@app/hooks/reduxHooks';
-import tunnel from '@app/assets/tunnel.png';
 
 interface SiderLogoProps {
   isSiderCollapsed: boolean;

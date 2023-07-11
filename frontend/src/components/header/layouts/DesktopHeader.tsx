@@ -36,7 +36,6 @@ export const DesktopHeader: React.FC<DesktopHeaderProps> = ({ isTwoColumnsLayout
           <Col style={{ display: 'flex', width: '211px', borderRight: '1px solid #ddd9d9', opacity: '1' }}>
             <S.LogoContainer>
               <img src={check} alt="" />
-              <p>Tunnel&apos;s</p>
             </S.LogoContainer>
           </Col>
           <Col>

@@ -3,8 +3,8 @@ import { UserProfileProps } from '@app/interfaces/User';
 import { Modal } from 'antd';
 import React, { useEffect, useState } from 'react';
 import './User-Profile.module.css';
-import tunnelStatsHands from '@app/TunnelImages/tunnelStatsHands.svg';
-import tunnelStatsPop from '@app/TunnelImages/tunnelStatsPop.svg';
+import statsHands from '@app/React-Setup-Images/statsHands.svg';
+import statsPop from '@app/React-Setup-Images/statsPop.svg';
 // import { getRecentJobs } from '@app/api/myprofile.api';
 import { Rate } from 'antd';
 import defaultImg from '@app/assets/images/dummy-profile-pic.jpg';
@@ -88,7 +88,7 @@ const BuilderProfile: React.FC<UserProfileProps> = ({ isProfileClicked, setProfi
                     style={{ boxShadow: '1px 1px 10px rgba(0, 0, 0, 0.1)' }}
                     className="w-[50px] h-[50px] rounded-[5px] flex items-center justify-center"
                   >
-                    <img className="w-[19px] h-[20px]" src={tunnelStatsPop} alt="" />
+                    <img className="w-[19px] h-[20px]" src={statsPop} alt="" />
                   </div>
 
                   <div className="gap-[4px]">
@@ -112,7 +112,7 @@ const BuilderProfile: React.FC<UserProfileProps> = ({ isProfileClicked, setProfi
                     style={{ boxShadow: '1px 1px 10px rgba(0, 0, 0, 0.1)' }}
                     className="w-[50px] h-[50px] rounded-[5px] flex items-center justify-center"
                   >
-                    <img className="w-[19px] h-[20px]" src={tunnelStatsHands} alt="" />
+                    <img className="w-[19px] h-[20px]" src={statsHands} alt="" />
                   </div>
 
                   <div className="gap-[4px]">
