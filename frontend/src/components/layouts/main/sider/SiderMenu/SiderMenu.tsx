@@ -4,8 +4,8 @@ import * as S from './SiderMenu.styles';
 import { sidebarNavigation, SidebarNavigationItem } from '../sidebarNavigation';
 import mainContext from '@app/context/mainContext';
 import { Select } from 'antd';
-import support from '@app/TunnelImages/support.svg';
-import setting from '@app/TunnelImages/setting.svg';
+import support from '@app/React-Setup-Images/support.svg';
+import setting from '@app/React-Setup-Images/setting.svg';
 import { ProfileDropdown } from '@app/components/header/components/profileDropdown/ProfileDropdown/ProfileDropdown';
 import { useAppSelector } from '@app/hooks/reduxHooks';
 import builderIcon from '@app/assets/icons/builders.svg';
@@ -88,19 +88,25 @@ const SiderMenu: React.FC<SiderContentProps> = ({ setCollapsed, isCollapsed }) =
                     isCollapsed && window.innerWidth < 1280 ? 'invisible' : 'visible'
                   }`}
                 >
-                  Settings
+                  Profile
                 </p>
               </div>
             </Link>
 
-            {!user && (
+            {/* {!user && (
               <div className="flex gap-[14px] cursor-pointer">
                 <img src={builderIcon} />
                 <Link to="login" className="hover:text-[#F2F4F7] text-[16px] leading-6 font-semibold text-[#F2F4F7]">
                   Sign In
                 </Link>
               </div>
-            )}
+            )} */}
+            <div className="flex gap-[14px] cursor-pointer">
+              <img src={builderIcon} />
+              <Link to="login" className="hover:text-[#F2F4F7] text-[16px] leading-6 font-semibold text-[#F2F4F7]">
+                Sign In
+              </Link>
+            </div>
           </div>
           <ProfileDropdown />
         </div>

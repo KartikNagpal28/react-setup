@@ -5,7 +5,6 @@ import { useAppSelector } from '@app/hooks/reduxHooks';
 const AuthLayout = React.lazy(() => import('@app/components/layouts/AuthLayout/AuthLayout'));
 import LoginPage from '@app/pages/LoginPage';
 
-//tunnel
 import RegisterPage from '@app/pages/RegisterPage';
 
 import MainLayout from '@app/components/layouts/main/MainLayout/MainLayout';
@@ -14,9 +13,9 @@ import { withLoading } from '@app/hocs/withLoading.hoc';
 
 import ProfilePage from '@app/pages/ProfilePages/Profile';
 import Home from '@app/pages/Home/Home';
-import BuilderPage from '@app/pages/BuilderPages/BuilderPage';
+
+import UserPage from '@app/pages/UserPages/UserPage';
 import MyProfilePage from '@app/pages/MyProfilePages/MyProfilePage';
-import BusinessPage from '@app/pages/BusinessPages/BusinessPage';
 import EmailVerification from '../authentication/EmailVerification/EmailVerification';
 import EmailVerifiedConfirm from '../authentication/EmailVerification/EmailVerifiedConfirm';
 import EmailVerificationPage from '@app/pages/EmailVerificationPage/EmailVerificationPage';
@@ -54,17 +53,17 @@ export const AppRouter: React.FC = () => {
       <Routes>
         <Route path="/" element={protectedLayout}>
           {/* <Route index element={<MyProfilePage />} /> */}
-          <Route index element={<BuilderPage />} />
+          <Route index element={<UserPage />} />
           {user && user.builderId ? (
             <Route path="profile" element={<MyProfilePage />} />
           ) : (
-            <Route path="profile" element={<BusinessPage />} />
+            <Route path="profile" element={<MyProfilePage />} />
           )}
 
           <Route path="server-error" element={<ServerError />} />
           <Route path="404" element={<Error404 />} />
           <Route path="profile" element={<ProfilePage />} />
-          <Route path="builder" element={<BuilderPage />} />
+          <Route path="user" element={<UserPage />} />
           <Route path="myprofile" element={<MyProfilePage />} />
         </Route>
 

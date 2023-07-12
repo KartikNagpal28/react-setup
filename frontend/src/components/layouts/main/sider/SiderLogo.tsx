@@ -2,9 +2,7 @@ import React from 'react';
 import * as S from './MainSider/MainSider.styles';
 import { RightOutlined } from '@ant-design/icons';
 import { useResponsive } from 'hooks/useResponsive';
-import tunnelLogo from '@app/assets/logo-light.svg';
 import { useAppSelector } from '@app/hooks/reduxHooks';
-import tunnel from '@app/assets/tunnel.png';
 
 interface SiderLogoProps {
   isSiderCollapsed: boolean;
@@ -19,9 +17,16 @@ export const SiderLogo: React.FC<SiderLogoProps> = ({ isSiderCollapsed, toggleSi
     <S.SiderLogoDiv>
       <S.SiderLogoLink to="/">
         {isSiderCollapsed && window.innerWidth < 1280 ? (
-          <img src={tunnel} alt="Tunnel" className="ml-1" />
+          // Logo for small screen
+          <span className="font-bold text-3xl">
+            <p>👩‍🔧</p>
+          </span>
         ) : (
-          <img src={tunnelLogo} alt="Tunnel" />
+          // Logo for large screen
+          <span className="font-bold text-3xl flex space-x-1">
+            <p>👩‍🔧</p>
+            <p className="text-white mt-1">Logo</p>
+          </span>
         )}
       </S.SiderLogoLink>
       {tabletOnly && (

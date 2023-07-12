@@ -3,7 +3,6 @@ import keyIcon from '@app/assets/icons/keyIcon.svg';
 import forgotPasswordModule from './ForgotPassword.module.css';
 import { BaseButtonsForm } from '@app/components/common/forms/BaseButtonsForm/BaseButtonsForm';
 import { Input } from 'antd';
-import { forgotPassword } from '@app/api/forgotpassword.api';
 import { useNavigate } from 'react-router-dom';
 import { notificationController } from '@app/controllers/notificationController';
 import BackToLogin from './BackToLogin';
@@ -18,15 +17,7 @@ const ForgotPassword: React.FC = () => {
   const [isFieldsChanged, setFieldsChanged] = useState(false);
   const [email, setEmail] = useState<string>('');
 
-  const handleSubmit = () => {
-    forgotPassword({ email })
-      .then(() => {
-        navigate('/forgotpasswordlink', { state: { email } });
-      })
-      .catch((err) => {
-        notificationController.error({ message: err?.data?.message });
-      });
-  };
+  const handleSubmit = () => {};
   return (
     <div className={`${forgotPasswordModule.container}`}>
       <div className={`${forgotPasswordModule.emailMainContainer}`}>

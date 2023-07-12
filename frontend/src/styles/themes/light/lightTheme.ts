@@ -50,7 +50,7 @@ const chartColors = {
 export const lightColorsTheme: ITheme = {
   primary: '#01509A',
   // primary1: '#f5f5f5',
-  //color change made for tunnel sidebar
+  //color change made for React-setup sidebar
   primary1: '#14fda8',
   primary2: '#DBDBDB',
   primary3: '#000000',
@@ -111,7 +111,7 @@ export const lightColorsTheme: ITheme = {
   layoutHeaderBg: 'transparent',
   // layoutSiderBg: 'linear-gradient(261.31deg, #006ccf -29.57%, #00509a 121.11%)',
   // layoutSiderBg: '#fff',
-  // changed color for tunnel sidebar
+  // changed color for React-setup sidebar
   layoutSiderBg: '#000',
 
   inputPlaceholder: '#404040',

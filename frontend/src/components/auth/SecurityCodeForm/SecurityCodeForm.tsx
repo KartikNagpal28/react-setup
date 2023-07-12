@@ -4,7 +4,6 @@ import { Image, Spin } from 'antd';
 import { BaseForm } from '@app/components/common/forms/BaseForm/BaseForm';
 import { VerificationCodeInput } from '@app/components/common/VerificationCodeInput/VerificationCodeInput';
 import { useAppDispatch } from '@app/hooks/reduxHooks';
-import { doVerifySecurityCode } from '@app/store/slices/authSlice';
 import { notificationController } from '@app/controllers/notificationController';
 import VerifyEmailImage from '@app/assets/images/verify-email.webp';
 import * as Auth from '@app/components/layouts/AuthLayout/AuthLayout.styles';
@@ -28,13 +27,6 @@ export const SecurityCodeForm: React.FC<SecurityCodeFormProps> = ({ onBack, onFi
   useEffect(() => {
     if (securityCode.length === 6) {
       setLoading(true);
-      dispatch(doVerifySecurityCode({ code: securityCode }))
-        .unwrap()
-        .then(onFinish || navigateForward)
-        .catch((err) => {
-          notificationController.error({ message: err.message });
-          setLoading(false);
-        });
     }
   }, [securityCode, navigateForward, onFinish, dispatch]);
 

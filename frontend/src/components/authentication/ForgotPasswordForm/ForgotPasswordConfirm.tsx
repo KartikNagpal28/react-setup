@@ -3,7 +3,6 @@ import VerifiedIcon from '@app/assets/icons/VerifiedIcon.svg';
 import forgotPasswordConfirmModule from './ForgotPasswordConfirm.module.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '@app/hooks/reduxHooks';
-import { doSetAuth } from '@app/store/slices/authSlice';
 import { notificationController } from '@app/controllers/notificationController';
 import BackToLogin from './BackToLogin';
 
@@ -12,14 +11,7 @@ const ForgotPasswordConfirm: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
-  const auth = () => {
-    dispatch(doSetAuth({ user: state.user, token: state.token }))
-      .unwrap()
-      .then(() => navigate('/'))
-      .catch((err) => {
-        notificationController.error({ message: err?.message });
-      });
-  };
+  const auth = () => {};
 
   return (
     <div className={`${forgotPasswordConfirmModule.container}`}>

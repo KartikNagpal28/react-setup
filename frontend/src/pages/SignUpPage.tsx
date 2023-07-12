@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageTitle } from '@app/components/common/PageTitle/PageTitle';
-import { SignUpForm } from '@app/components/auth/SignUpForm/SignUpForm';
+import SignUpForm from '@app/components/authentication/SignUp-Form/SignUpForm';
 
 const SignUpPage: React.FC = () => {
   return (

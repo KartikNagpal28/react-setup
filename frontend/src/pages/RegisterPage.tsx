@@ -1,4 +1,4 @@
-import SignUpForm from '@app/components/authentication/SignUpForm/SignUpForm';
+import SignUpForm from '@app/components/authentication/SignUp-Form/SignUpForm';
 
 const RegisterPage: React.FC = () => {
   return (

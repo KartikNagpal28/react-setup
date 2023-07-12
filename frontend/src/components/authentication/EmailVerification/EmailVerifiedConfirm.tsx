@@ -3,7 +3,6 @@ import VerifiedIcon from '@app/assets/icons/VerifiedIcon.svg';
 import emailConfirmModule from './EmailVerifiedConfirm.module.css';
 import BackToLoginButton from './BackToLoginButton';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { doSetAuth } from '@app/store/slices/authSlice';
 import { notificationController } from '@app/controllers/notificationController';
 import { useAppDispatch } from '@app/hooks/reduxHooks';
 
@@ -12,14 +11,7 @@ const EmailVerifiedConfirm: React.FC = () => {
   const { state } = useLocation();
   const dispatch = useAppDispatch();
 
-  const auth = () => {
-    dispatch(doSetAuth({ user: state.user, token: state.token }))
-      .unwrap()
-      .then(() => navigate('/'))
-      .catch((err) => {
-        notificationController.error({ message: err?.message });
-      });
-  };
+  const auth = () => {};
 
   return (
     <div className={`${emailConfirmModule.container}`}>

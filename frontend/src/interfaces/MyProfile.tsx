@@ -4,10 +4,10 @@ export interface MyProfileHeaderProps {
   title: string;
 }
 
-export interface BuilderSkills {
-  id: number;
-  skillName: string;
-}
+// export interface BuilderSkills {
+//   id: number;
+//   skillName: string;
+// }
 
 export interface MyProfileRecentJobsProps {
   builderId: number;

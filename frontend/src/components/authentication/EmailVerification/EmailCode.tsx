@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EmailIcon from '@app/assets/icons/EmailIcongreen.svg';
 import emailCodeModule from './EmailCode.module.css';
-import { EmailVerification, verify } from 'api/emailverification.api';
 import { notificationController } from '@app/controllers/notificationController';
 import { EmailResend } from './EmailResend';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -29,21 +28,6 @@ const EmailCode: React.FC = () => {
     }
     // Send to API
     setLoading(true);
-    const data: EmailVerification = {
-      code: codeNum,
-      email: email,
-    };
-    verify(data)
-      .then((res) => {
-        navigate('/verified', { state: { user: res.data.user, token: res.data.token } });
-      })
-      .catch((err) => {
-        notificationController.error({ message: err?.data?.message });
-        navigate('/');
-      })
-      .finally(() => {
-        setLoading(false);
-      });
   }, [search, setLoading, navigate]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, i: number) => {
@@ -59,21 +43,9 @@ const EmailCode: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const codeFiltered: number[] = code.filter((x) => x !== null) as number[]; // Filter out nulls
-    const verificationCode = codeFiltered.reduce((prev, current) => prev * 10 + current, 0);
     if (state?.email === null) {
       return;
     }
-    const data: EmailVerification = {
-      code: verificationCode,
-      email: state?.email,
-    };
-    verify(data)
-      .then((res) => {
-        navigate('/verified', { state: { user: res.data.user, token: res.data.token } });
-      })
-      .catch((err) => {
-        notificationController.error({ message: err?.data?.message });
-      });
   };
 
   if (loading) {

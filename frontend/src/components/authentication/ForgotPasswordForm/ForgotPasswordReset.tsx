@@ -4,7 +4,6 @@ import { BaseButtonsForm } from '@app/components/common/forms/BaseButtonsForm/Ba
 import { Input } from 'antd';
 import forgotPasswordResetModule from './ForgotPasswordReset.module.css';
 import { notificationController } from '@app/controllers/notificationController';
-import { forgotPasswordVerify } from '@app/api/forgotpassword.api';
 import { useLocation, useNavigate } from 'react-router-dom';
 import BackToLogin from './BackToLogin';
 
@@ -34,14 +33,6 @@ const ForgotPasswordReset: React.FC = () => {
       notificationController.error({ message: 'Invalid params' });
       return;
     }
-    forgotPasswordVerify({ email, token, newPassword: password })
-      .then((res) => {
-        navigate('/forgotpasswordconfirm', { state: { user: res.data.user, token: res.data.token } });
-      })
-      .catch((err) => {
-        notificationController.error({ message: err?.data?.message });
-        navigate('/');
-      });
   };
 
   return (
